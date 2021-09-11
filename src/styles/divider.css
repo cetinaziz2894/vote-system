@@ -1,0 +1,14 @@
+.divider {
+    width: 80%;
+    height: 3px;
+    background-color: rgb(236 236 236);
+    border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .divider {
+        width: 100%;
+    }
+} 

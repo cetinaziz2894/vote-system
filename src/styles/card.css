@@ -1,0 +1,123 @@
+.delete-icon{
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.delete-icon  > svg{
+    width: 20px;
+    height: 20px;    
+    color: #dc1010;
+    border: 1px solid white;
+    box-shadow: 0 0 3px 3px grey;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: -20px;
+    background: white;
+}
+.card {
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+
+.card:hover{
+    background-color: rgb(239 239 239 / 55%);
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+
+.card .point{
+    width: 100px;
+    max-height: 100px;
+    background-color:rgb(199 199 199);
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.card .point  p:nth-child(1){
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card .point  p:nth-child(2){
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card .text {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    width: inherit;
+    height: inherit;
+}
+
+.card .text .name{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card .text .link{
+    margin: 0px;
+    color:  rgb(199 199 199);
+}
+
+.card .text .vote{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .text .vote .down-vote{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card .text .vote .down-vote > p{
+    margin: 10px 0px;
+    color: rgb(199 199 199);
+}
+
+.card .text .vote .down-vote > svg{
+    color: rgb(199 199 199);
+}
+
+.card .text .vote .up-vote{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.card .text .vote .up-vote > p{
+    margin: 10px 0px;
+    color: rgb(199 199 199);
+}
+
+.card .text .vote .up-vote > svg{
+    color: rgb(199 199 199);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+} 

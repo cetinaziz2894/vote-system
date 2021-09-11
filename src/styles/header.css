@@ -1,0 +1,49 @@
+.header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(189 189 189);
+}
+
+.header .image{
+    width:350px;
+    height: 70px;
+}
+
+.header .text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(10, 10, 10);
+}
+
+.header .text > p {
+    margin: 0px;
+}
+
+.header .text > p:nth-child(1) {
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  .header .text > p:nth-child(2) {
+    margin-right: 10px;    
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.header .text > p:nth-child(3) {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+} 
