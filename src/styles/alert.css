@@ -1,0 +1,24 @@
+.alert{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4e7d4;
+    border: 1px solid green;
+    width: 40%;
+    top: 5%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.alert p{
+    font-size: 30px;
+    color: green;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .alert{
+        width: 80%;
+    }
+} 

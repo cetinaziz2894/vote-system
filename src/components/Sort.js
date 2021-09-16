@@ -1,23 +1,34 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { setSort } from '../actions'
 import '../styles/sort.css'
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onChangeSort: (e) => dispatch(setSort(e.target.value)),
+    }
+}
 
 export const dropdownValues = [
     {
+        name:"Order By",
+        value:"SORT_LIST_DEFAULT"
+    },
+    {
         name:"Most Voted (Z -> A)",
-        value:1
+        value:"SORT_LIST_MOST_VOTED"
     },
     {
         name:"Less Voted (A -> Z)",
-        value:2
+        value:"SORT_LIST_LESS_VOTED"
     },
 
 ]
 
-export default function Sort() {
+const Sort = ({sort, onChangeSort}) => {
     return (
         <div className="dropdown">
-            <select className="classic" name="sort" id="sort">
-                <option value="" disabled defaultValue hidden>Order By</option>
+            <select className="classic" name="sort" id="sort" onChange={onChangeSort}  value={sort}>
                 {
                     dropdownValues && dropdownValues.map(el => 
                         <option key={el.value} value={el.value}>{el.name}</option>
@@ -27,3 +38,5 @@ export default function Sort() {
         </div>
     )
 }
+
+export default connect(null, mapDispatchToProps)(Sort)

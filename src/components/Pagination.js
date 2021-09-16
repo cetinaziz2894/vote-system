@@ -1,23 +1,50 @@
 import React from 'react'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
+import { setPage } from '../actions';
 import '../styles/pagination.css';
 
-export default function Pagination() {
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onChangePage: (page) => dispatch(setPage(page)),
+    }
+}
+
+function PageNumber(props) {
+    let items = [];
+    for (let i = 1; i <= props.numTimes; i++) {
+      items.push(props.children(i));
+    }
+    return <>{items}</>;
+  }
+
+const Pagination = ({page, onChangePage}) => {
+
+    const {list} = useSelector(state => state);
     return (
         <div className="pagination">
-            <div className="prev">
+            {
+                page > 1 ? <div className="prev" onClick={() => onChangePage(page-1)}>
                 <FaAngleLeft />
-            </div>
+            </div> : null
+            }
+            
             <div className="pages">
-                <p>1</p>
-                <p className="boxed-page" onClick={() => console.log("girdi")}>2</p>
-                <p>3</p>
-                <p>4</p>
-                <p>5</p>
+                {
+                    page && <PageNumber numTimes={Math.ceil(list.length/5)}>
+                        {(index) => <p className={(page === index ? "boxed-page" : null)} key={index}>{index}</p>}
+                      </PageNumber>
+                }
             </div>
-            <div className="next">
+            {
+                (page * 5) - list.length < 0 ? <div className="next" 
+                onClick={() => {onChangePage(page+1)}}>
                 <FaAngleRight />
-            </div>
+            </div> : null
+            }
+            
         </div>
     )
 }
+export default connect(null, mapDispatchToProps)(Pagination)

@@ -1,9 +1,10 @@
 .submit-div {
+    width: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 20px 10px;
     background: rgb(236 236 236);
     border-radius: 5px;
@@ -48,8 +49,17 @@
 
 @media only screen and (max-width: 768px) {
     .submit-div {
-        width: 100%;
-        display:flex;
-        flex-direction: column;
+        width: 80%;
+        flex-direction: row;
+        margin: 10px;
+    }
+
+    .submit-div .icon{
+        width: 35px;
+        height: 35px;
+    }
+
+    .submit-div .link p{
+        font-size: 28px;
     }
 } 

@@ -1,7 +1,8 @@
-import listReducer from "./list";
 import { combineReducers } from "redux";
-
+import list from "./list";
+import sort from "./sort";
+import page from "./page";
+import alert from "./alert";
 // The key of this object will be the name of the store
-const rootReducers = combineReducers({ list: listReducer });
 
-export default rootReducers;
+export default combineReducers({list, sort, page, alert});
