@@ -7,11 +7,6 @@
     border-bottom: 1px solid rgb(189 189 189);
 }
 
-.header .image{
-    width:350px;
-    height: 70px;
-}
-
 .header .text{
     display: flex;
     flex-direction: row;

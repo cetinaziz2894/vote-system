@@ -1,10 +1,9 @@
 import React from 'react';
-import Logo from '../assets/img/hepsiburada-logo.png'
 import '../styles/header.css';
 export default function Header() {
     return (
         <div className="header">
-            <img className="image" src={Logo} alt="logo" />
+                <h2>VOTING SYSTEM</h2>
             <div className="text">
                 <p>Link</p>
                 <p>VOTE</p>
