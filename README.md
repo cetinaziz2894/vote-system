@@ -1,8 +1,8 @@
 # Voting System - React
 
-<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen.PNG" alt="screenshot-1" style="width:200px;" >
-<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen_1.PNG" alt="screenshot-2" style="width:200px;" >
-<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen_2.PNG" alt="screenshot-3" style="width:200px;" >
+<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen.PNG" alt="screenshot" style="width:800px;" >
+<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen_2.PNG" alt="screenshot_1" style="width:800px;" >
+<img src="https://github.com/cetinaziz2894/vote-system/blob/main/public/screen_3.PNG" alt="screenshot-2" style="width:800px;" >
 
 
 This is a demo project for voting system. You can add element in the system and you can vote this element and make create, delete, update, read operations. Pagination and sorting is also added can be found in this app.
